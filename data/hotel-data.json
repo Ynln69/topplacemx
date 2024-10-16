@@ -1,0 +1,40 @@
+{
+  "hotels": [
+    {
+      "name": "Mercure Warszawa Centrum",
+      "price": "$158.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 123 reseñas",
+      "image": "../img/hotel-1.jpg"
+    },
+    {
+      "name": "Hampton by Hilton Warsaw City Centre",
+      "price": "$94.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 168 reseñas",
+      "image": "../img/hotel-2.jpg"
+    },
+    {
+      "name": "Radisson Blu Hotel, Szczecin",
+      "price": "$144.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 252 reseñas",
+      "image": "../img/hotel-3.jpg"
+    },
+    {
+      "name": "Apartamentos en Sky Tower - Wrocław",
+      "price": "$127.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 261 reseñas",
+      "image": "../img/hotel-4.jpg"
+    },
+    {
+      "name": "Ibis Poznań Centrum",
+      "price": "$165.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 193 reseñas",
+      "image": "../img/hotel-5.jpg"
+    },
+    {
+      "name": "H15 Luxury Palace",
+      "price": "$128.00 por noche",
+      "recenzi": "⭐️⭐️⭐️⭐️⭐️ 310 reseñas",
+      "image": "../img/hotel-6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+.hotel-form-wrapper {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--bg-color);
+}
+.hotel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hotel-form-title {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 50px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+.form-group select,
+.form-group input[type="date"] {
+  width: 100%;
+  border: 1px solid rgba(209, 106, 143, 0.2);
+  border-radius: 50px;
+  padding: 10px 20px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: transparent;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 16px;
+}
+.custom-select-container {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: url(../../img/eva_arrow-down-fill.svg);
+    font-size: 14px;
+    stroke: var(--accent-color);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+.custom-select option {
+  background-color: var(--bg-color);
+}
+
+.check-availability-btn {
+  width: 100%;
+  border: 1px solid rgba(209, 106, 143, 0.2);
+  border-radius: 50px;
+  padding: 10px 20px;
+
+  background-color: var(--accent-color);
+  font-weight: 700;
+  text-align: center;
+  color: var(--second-color);
+  transition: background-color 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: #f73d81;
+  }
+}

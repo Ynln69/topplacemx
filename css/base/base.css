@@ -1,0 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+.blur-background {
+  filter: blur(20px);
+}
+.section-content {
+  padding-top: clamp(10px, calc(10px + 5vw), 20px);
+  padding-bottom: clamp(10px, calc(10px + 5vw), 20px);
+}
+.subtitle-content {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.text-content {
+  font-size: 18px;
+  color: var(--second-color);
+}
+.span {
+  width: 100%;
+  font-size: 18px;
+}
+.content-list {
+  list-style: square;
+  margin-left: 35px;
+}

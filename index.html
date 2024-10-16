@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topplacemx</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kameron:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/hero-img-desk.webp" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-container">
+        <nav class="nav-header">
+          <a href="./" class="header-link link">Topplacemx</a>
+          <ul class="nav-list list">
+            <li class="nav-item">
+              <a href="./terms-conditions.html" class="nav-link link">Instrucciones</a>
+            </li>
+            <li class="nav-item">
+              <a href="#hot-deals" class="nav-link link">Ofertas calientes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews" class="nav-link link">Reseñas</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="./contacts-page.html"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="nav-link link"
+                >Contactos</a
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="header-button js-open-menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="24" height="24" class="header-svg">
+              <use href="./img/mob-menu-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="page-content">
+      <section class="hero">
+        <div class="hero-container">
+          <picture>
+            <source
+              media="(max-width: 833px)"
+              srcset="./img/hero-img-mob.webp"
+            />
+            <source
+              media="(min-width: 834px)"
+              srcset="./img/hero-img-desk.webp"
+            />
+            <img
+              loading="lazy"
+              src="./img/hero-img-desk.webp"
+              alt="Descripción de la imagen"
+              class="hero-img"
+            />
+          </picture>
+          <div class="hotel-form-wrapper">
+            <span class="subtitle">Encontrar hotel</span>
+            <h2 class="hotel-form-title main-title">
+              Encuentra el hotel ideal para tu estancia
+            </h2>
+            <form id="hotel-form" class="hotel-form">
+              <div class="form-group">
+                <label for="guests">Huéspedes</label>
+                <div class="custom-select-container">
+                  <select id="guests" name="guests" class="custom-select">
+                    <option value="1">1 adulto</option>
+                    <option value="2">2 adultos</option>
+                    <option value="3">3 adultos</option>
+                    <option value="4">4 adultos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="room">Habitación</label>
+                <div class="custom-select-container">
+                  <select id="room" name="room" class="custom-select">
+                    <option value="classic">Habitación clásica</option>
+                    <option value="deluxe">Habitación de lujo</option>
+                    <option value="suite">Suite</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="checkin-date">Fecha de check-in</label>
+                <div class="custom-select-container">
+                  <input
+                    type="date"
+                    id="checkin-date"
+                    name="checkin-date"
+                    value="2024-10-01"
+                    class="custom-select"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="checkout-date">Fecha de salida</label>
+                <div class="custom-select-container">
+                  <input
+                    type="date"
+                    id="checkout-date"
+                    name="checkout-date"
+                    value="2024-10-07"
+                    class="custom-select"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="check-availability-btn">
+                Verificar disponibilidad
+              </button>
+            </form>
+            <div
+              id="loading"
+              style="
+                display: none;
+                margin-top: 10px;
+                font-weight: 600;
+                color: var(--accent-color);
+                font-size: 22px;
+                text-align: center;
+              "
+            >
+              Cargando hoteles...
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <span class="subtitle">Bienvenido a nuestros hoteles</span>
+          <h2 class="main-title">Nunca querrás irte</h2>
+          <ul class="services-list">
+            <li class="services-item">
+              <div class="services-wrapper">
+                <svg class="services-svg">
+                  <use
+                    href="./img/symbol-defs.svg#icon-mingcute_service-line"
+                  ></use>
+                </svg>
+              </div>
+              <h3 class="services-title">Servicio amigable</h3>
+            </li>
+            <li class="services-item">
+              <div class="services-wrapper">
+                <svg class="services-svg">
+                  <use href="./img/symbol-defs.svg#icon-cup"></use>
+                </svg>
+              </div>
+              <h3 class="services-title">Desayuno</h3>
+            </li>
+            <li class="services-item">
+              <div class="services-wrapper">
+                <svg class="services-svg">
+                  <use href="./img/symbol-defs.svg#icon-masaz"></use>
+                </svg>
+              </div>
+              <h3 class="services-title">Masaje</h3>
+            </li>
+            <li class="services-item">
+              <div class="services-wrapper">
+                <svg class="services-svg">
+                  <use href="./img/symbol-defs.svg#icon-transform"></use>
+                </svg>
+              </div>
+              <h3 class="services-title">Servicios de traslado</h3>
+            </li>
+            <li class="services-item">
+              <div class="services-wrapper">
+                <svg class="services-svg">
+                  <use href="./img/symbol-defs.svg#icon-kasyno"></use>
+                </svg>
+              </div>
+              <h3 class="services-title">Casino</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container about-container">
+          <div class="about-img-thumb">
+            <picture>
+              <source
+                media="(max-width: 833px)"
+                srcset="./img/about-img.webp"
+              />
+              <source
+                media="(min-width: 834px)"
+                srcset="./img/about-img-desk.webp"
+              />
+              <img
+                loading="lazy"
+                src="./img/about-img.webp"
+                alt="Descripción de la imagen"
+                class="about-wrapper-img"
+              />
+            </picture>
+          </div>
+          <div class="about-content">
+            <span class="subtitle">Acerca de nosotros</span>
+            <h2 class="main-title">
+              Confort y lujo en un ambiente acogedor y hospitalario
+            </h2>
+            <p class="main-text">
+              ¡Bienvenido a nuestra página web, donde encontrarás los mejores
+              hoteles para unas vacaciones inolvidables! Ofrecemos una selección
+              cuidadosa de hoteles que combinan confort, lujo y hospitalidad
+              para que disfrutes al máximo de tu estancia. Si estás buscando un
+              lugar para relajarte y disfrutar de un ambiente excepcional, has
+              llegado al sitio adecuado. Nuestros hoteles están ubicados en
+              lugares pintorescos, ofrecen un alto nivel de servicio y
+              satisfarán incluso las expectativas más exigentes. ¡Reserva tus
+              vacaciones ideales ahora!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <span class="subtitle">Fotos</span>
+          <h2 class="main-title">Galería</h2>
+          <ul class="gallery-list" id="gallery-list"></ul>
+        </div>
+      </section>
+      <section class="section" id="hot-deals">
+        <div class="container">
+          <span class="subtitle">Nuestros hoteles</span>
+          <h2 class="main-title">Descubre lujo y confort</h2>
+          <ul class="hotel-list" id="our-hotel"></ul>
+        </div>
+      </section>
+      <section class="section finder-section" id="hotel-section">
+        <div class="container">
+          <div class="finder-container">
+            <h2 class="finder-title">
+              ¿No puedes encontrar el hotel adecuado?
+            </h2>
+            <p class="finder-text">
+              Si no puedes encontrar el hotel ideal para tu viaje, ¡no te
+              preocupes! Nuestro equipo está listo para ayudarte. Simplemente
+              infórmanos sobre tus preferencias y te ayudaremos a encontrar el
+              lugar ideal para tu estancia. ¡Tus vacaciones perfectas están a
+              solo un mensaje de distancia!
+            </p>
+            <a
+              href="./contacts-page.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="finder-link"
+              >todos los hoteles</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section" id="reviews">
+        <div class="container">
+          <span class="subtitle">Reseñas</span>
+          <h2 class="main-title">Comentarios de nuestros huéspedes</h2>
+          <ul class="comments-list">
+            <li>
+              <div class="comments-thumb">
+                <img
+                  src="./img/user-1.png"
+                  alt="Anastasia Marynec"
+                  class="comments-img"
+                />
+                <h3>Anna Kowalska</h3>
+              </div>
+              <p class="main-text">
+                “¡Nuestra estancia en el Hotel Wawel fue fantástica! La
+                ubicación era ideal, a poca distancia de los principales puntos
+                de interés de Cracovia. El personal fue extremadamente amable y
+                servicial, y nuestra habitación estaba limpia y cómoda. El
+                desayuno buffet fue un punto destacado, con una amplia variedad
+                de opciones deliciosas. ¡Lo recomiendo encarecidamente!”
+              </p>
+            </li>
+            <li>
+              <div class="comments-thumb">
+                <img
+                  src="./img/user-2.png"
+                  alt="Maria Kowalczyk"
+                  class="comments-img"
+                />
+                <h3>Jakub Nowak</h3>
+              </div>
+              <p class="main-text">
+                “¡El Sofitel Warsaw Victoria superó nuestras expectativas! La
+                decoración elegante y las instalaciones de lujo hicieron que
+                nuestra visita fuera inolvidable. Los servicios de spa fueron de
+                primera clase y disfrutamos mucho de las comidas en el
+                restaurante del hotel. El hotel está ubicado en el centro, lo
+                que facilita la exploración de la ciudad. ¡Una experiencia
+                verdaderamente de 5 estrellas!”
+              </p>
+            </li>
+            <li>
+              <div class="comments-thumb">
+                <img
+                  src="./img/user-3.png"
+                  alt="Vladyslav Nowak"
+                  class="comments-img"
+                />
+                <h3>Marta Zielińska</h3>
+              </div>
+              <p class="main-text">
+                “Tuvimos una experiencia maravillosa en el Grand Hotel Tiffi. El
+                hotel está bellamente diseñado y ofrece vistas espectaculares de
+                la naturaleza circundante. El personal fue acogedor y amable, lo
+                que nos brindó comodidad durante toda nuestra estancia. El
+                centro de bienestar fue la manera perfecta de relajarse después
+                de un día de turismo. ¡Definitivamente volveremos!”
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <h2 class="footer-title">Topplacemx</h2>
+        <nav>
+          <ul class="footer-nav-list">
+            <li>
+              <p class="footer-nav-text">Enlaces útiles</p>
+              <a href="#hot-deals" class="footer-nav-link">Hotele</a>
+            </li>
+            <li>
+              <p class="footer-nav-text">Privacidad</p>
+              <ul>
+                <li>
+                  <a
+                    href="./cookie-page.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Política de archivos de cookie</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contacts-page.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Contacto</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy-policy.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Política de privacidad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./terms-conditions.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Reglas y condiciones</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="footer-nav-text">¿Tienes alguna pregunta?</p>
+              <ul>
+                <li>
+                  <a
+                    href="./cookie-page.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Política de cookies
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="./contacts-page.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Contacto</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./privacy-policy.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                  >
+                    Política de privacidad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contacts-page.html"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="footer-nav-link"
+                    >Estatuto</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer-text-list">
+          <li>
+            <p>Salón Madison 101</p>
+          </li>
+          <li>
+            <address>427 S Margego y Sate 1 155 Pedidina, S Fair Buey</address>
+          </li>
+          <li>
+            <a href="tell:+48222438000">+48 22 243 80 00</a>
+          </li>
+          <li>
+            <a href="mailto:info@topplacemx.com">info@topplacemx.com</a>
+          </li>
+        </ul>
+        <ul class="footer-icon-list">
+          <li class="footer-icon-item">
+            <p class="footer-thumb">+18</p>
+          </li>
+          <li class="footer-icon-item">
+            <a
+              href="https://www.gamcare.org.uk/"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><img src="./img/footer-link.webp" alt="logo gamcare"
+            /></a>
+          </li>
+          <li class="footer-icon-item">
+            <a
+              href=" https://www.gambleaware.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><img src="./img/BeGamble.webp" alt="logo gambleaware"
+            /></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          Copyright © 2024 All RCopyright © 2024 Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="mobile-menu-wrapper">
+        <a href="./" class="mob-link link">Topplacemx</a>
+        <button class="mobile-menu-btn js-close-menu" type="button">
+          <svg width="24" height="24">
+            <use href="./img/mob-menu-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <ul class="mob-nav-list list">
+          <li>
+            <a
+              href="./cookie-page.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="mob-nav-link link"
+              >Cookies Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="./contacts-page.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="mob-nav-link link"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="./privacy-policy.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="mob-nav-link link"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="./terms-conditions.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="mob-nav-link link"
+              >Terms & Conditions</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/hotel.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

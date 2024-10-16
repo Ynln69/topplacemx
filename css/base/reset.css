@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.main-title {
+  margin-bottom: 50px;
+
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+.main-text {
+  color: var(--text-color);
+}
+.main-link {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+
+  color: var(--second-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}

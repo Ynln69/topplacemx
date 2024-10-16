@@ -1,0 +1,13 @@
+:root {
+  --font-family: "Rubik", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Kameron", sans-serif;
+  --forth-family: "Montserrat", sans-serif;
+
+  --main-color: #000;
+  --accent-color: #d16a8f;
+  --second-color: #fff;
+
+  --main-bg: #fff;
+  --second-bg-color: #d16a8f;
+}

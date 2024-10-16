@@ -1,0 +1,198 @@
+/* STYLES FOR services*/
+.services-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    justify-content: center;
+  }
+}
+.services-item {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 1024px) {
+    justify-content: center;
+  }
+}
+.services-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+
+  background-color: var(--second-bg-color);
+  @media (min-width: 1024px) {
+    border-radius: 100px;
+    width: 72px;
+    height: 72px;
+  }
+}
+.services-svg {
+  width: 24px;
+  height: 24px;
+  @media (min-width: 1024px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+.services-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: clamp(1rem, 0.764vw + 0.812rem, 1.5rem);
+  line-height: clamp(1.2rem, 0.917vw + 0.975rem, 1.8rem);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color);
+}
+/* STYLES FOR ABOUT */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  @media (min-width: 834px) {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+.about-content {
+  width: 100%;
+  max-width: 580px;
+}
+/* STYLES FOR HOTELS */
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 10px;
+  @media (min-width: 1024px) {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.hotel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--second-color);
+  @media (min-width: 834px) {
+    background-color: transparent;
+  }
+}
+.hotel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.hotel-item-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.hotel-item-text {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.hotel-link {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 10px;
+
+  background-color: var(--second-bg-color);
+  color: var(--second-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* STYLES FOR GALLERY */
+.gallery-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* STYLES FOR finder */
+.finder-section {
+  background-color: var(--second-bg-color);
+}
+.finder-container {
+  width: 100%;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.finder-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+.finder-text {
+  font-family: var(--second-family);
+  color: var(--second-color);
+}
+.finder-link {
+  border-radius: 25px;
+  padding: 10px;
+
+  background-color: var(--main-bg);
+  color: var(--accent-color);
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* STYLES FOR REVIEWS */
+.comments-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+.comments-item {
+  border: 1px solid #c0c1ce;
+  border-radius: 10px;
+  padding: 10px;
+}
+.comments-thumb {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-bottom: 10px;
+}
+.comments-thumb h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-style: normal;
+
+}
